@@ -68,7 +68,7 @@ const qa = async () => {
   // cli engine
 
   const repoName = process.argv[2] || "express-db-boilerplate";
-  const gitCheckoutCommand = `git clone --depth 1 https://github.com/MHNahib/test-cli-engine.git ${repoName} && mkdir ${repoName}-1 && cp -r ./${repoName}/template/${chooseDB}/${module}/* ./${repoName}-1 && rm -r ./${repoName} && mv ${repoName}-1 ${repoName}`;
+  const gitCheckoutCommand = `git clone --depth 1 https://github.com/MHNahib/test-cli-engine.git ${repoName} && mkdir ${repoName}-1 && cp -r ./${repoName}/template/${chooseDB}/${module}/* ./${repoName}-1 && rm -r ./${repoName} && mv ${repoName}-1 ${repoName} && rm -r bin .git .gitignore src node_modules index.js db.json package-lock.json package.json && cd ${repoName} && npm i`;
   // const installDepsCom = `cd ${repoName} && npm install`;
   // const removeTemplateFileCommands = `cd ${repoName} && rm -r bin .git`;
 
