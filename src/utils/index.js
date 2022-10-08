@@ -47,11 +47,13 @@ const removeBoilarplate = (folder) => {
   fs.rm(`./${folder}`, { recursive: true }, () => console.log("done"));
 };
 
-const readJsonDB = () =>
-  fs.readFile("db.json", (err, data) => {
+const readJsonDB = () => {
+  const data = fs.readFileSync("db.json", (err) => {
     if (err) throw err;
-    let db = JSON.parse(data);
-    console.log(db);
   });
+  let db = JSON.parse(data);
+  // console.log(db);
+  return db;
+};
 
 module.exports = { generateDB, readJsonDB };
