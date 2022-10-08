@@ -1,5 +1,7 @@
+const cli = require("./bin/cli");
 const qa = require("./src/utils/qa");
 
 // QA
 
-qa();
+const data = qa();
+cli(data);

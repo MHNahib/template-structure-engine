@@ -56,4 +56,11 @@ const readJsonDB = () => {
   return db;
 };
 
-module.exports = { generateDB, readJsonDB };
+const moveFile = (root, template) => {
+  fs.rename(`./template/${root}/${template}`, `./${template}`, (err) => {
+    if (err) console.log(err);
+    console.log("success!");
+  });
+};
+
+module.exports = { generateDB, readJsonDB, moveFile };
