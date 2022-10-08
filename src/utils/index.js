@@ -21,7 +21,9 @@ const generateDB = () => {
 
   const files = fs.readdirSync("./boilerplate/template");
 
-  const subFiles = files.map((item) => fs.readdirSync(`./template/${item}`));
+  const subFiles = files.map((item) =>
+    fs.readdirSync(`./boilerplate/template/${item}`)
+  );
 
   // generate json
   const templateDB = subFiles.map((item, index) => {
