@@ -1,0 +1,24 @@
+[
+    {
+        "root": "mongodb",
+        "templates": [
+            "auth",
+            "basic"
+        ]
+    },
+    {
+        "root": "mssql",
+        "templates": [
+            "auth",
+            "basic"
+        ]
+    },
+    {
+        "root": "mysql",
+        "templates": [
+            "auth",
+            "basic",
+            "validation-with-joi"
+        ]
+    }
+]

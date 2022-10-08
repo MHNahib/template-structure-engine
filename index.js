@@ -1,7 +1,5 @@
-const { generateDB, readJsonDB } = require("./src/utils");
+const qa = require("./src/utils/qa");
 
-// for writing json
-generateDB();
+// QA
 
-// for reading json
-readJsonDB();
+qa();
