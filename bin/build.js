@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const { generateDB, readJsonDB } = require("../src/utils");
 
 // for writing json
